@@ -1,0 +1,289 @@
+.MagicContentCell {
+    background: none;
+    padding-top: 0px;
+}
+.MagicNavTab {
+    display: none;
+}
+#UserSubHeaderRow {
+    display: none;
+}
+#MainHeaderTable {
+    height: 130;
+    /* Make the grey gradient smaller during login */
+    background-image: linear-gradient(#fefefe 0, #e6e7e8 80%,#FFF 20%);
+}
+#loginContentCell {
+    margin: 0px 40px 20px 40px;
+    padding: 20px;
+    border-radius: 8px ;
+    -moz-border-radius: 8px ;
+    -webkit-border-radius: 8px ;
+    background: #FFF;
+    box-shadow: 3px 3px 5px 3px rgba(105,105,105,0.6);
+    -webkit-box-shadow: 3px 3px 5px 3px rgba(105,105,105,0.6);
+    -moz-box-shadow: 3px 3px 5px 3px rgba(105,105,105,0.6);
+    -webkit-transition: opacity 1s ease-out;
+    transition: opacity 1s ease-out;
+    display: flex;
+}
+
+.login-info-content {
+    width: 384px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+/* The following two SHOULD be defaults */
+.login-info-content h2 {
+    font-size: 2.5em;
+}
+.login-info-content h4,
+#login-form-table h4 {
+    color: #10456B;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+#login-form-table h4 {
+    text-align:center;
+}
+.login-info-content .main_wiz {
+    color: #000;
+    opacity: 0.7;
+}
+#login-form-wrapper {
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 350px;
+    box-shadow: 3px 3px 5px 3px rgba(105,105,105,0.6);
+    -webkit-box-shadow: 3px 3px 5px 3px rgba(105,105,105,0.6);
+    -moz-box-shadow: 3px 3px 5px 3px rgba(105,105,105,0.6);
+    -webkit-transition: opacity 1s ease-out;
+    transition: opacity 1s ease-out;
+    margin-left: 100px;
+    padding-bottom: 30px;
+}
+#login-form-table {
+    border: collapse;
+    border-spacing: 0;
+    width: 80%;
+    border: 0px;
+    margin: 0 auto;
+}
+#login-form-table th {
+    border: 0px 0px 0px 2px solid darkgrey;
+    background: none;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+#login-form-table td {
+    display: block;
+    text-align: left;
+}
+#login-form-table tr td:first-child {
+    padding-top: 20px;
+}
+#login-form-table tr td:nth-child(2) {
+    padding-top: 5px;
+}
+#login-form-table tr:last-child {
+    text-align: right;
+}
+#login-form-table label {
+    font-size: .9em;
+}
+#login-form-table td.textright {
+    color: #000;
+    opacity: 0.7;
+}
+#login-form-table input {
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.3em;
+    line-height: 1.4em;
+}
+#login-form-table input[type="submit"] {
+    text-align: right;
+    float: right;
+    border: 1px outset #10456B;
+    background: lightgrey;
+    padding: 5px 15px 5px 15px;
+    cursor: pointer;
+}
+/* Way to position to the adtrack insider the header */
+.adtrack-user-spot-a {
+    position: absolute;
+    top: 50px;
+    left: 380px;
+
+}
+/* Legacy id's from themes, are we to deprecate? */
+/* Also could be from landing.php as well */
+#recover-pass-td a {
+    display: inline-block;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+#login-error {
+    display: none;
+    position:absolute;
+    width:148px;
+    margin-top:4px;
+    font-weight:bold;
+}
+
+/* Login Page */
+#LoginWrapper {
+    margin: auto;
+    width: 620px;
+}
+
+#LoginInfo {
+    float: left;
+    width: 400px;
+    text-align: left;
+    font-size: 14px;
+    margin: 0;
+}
+#LoginInfo p {
+    margin-top: 8px;
+}
+
+.LoginBody {
+    background: #fff url('../pics/background2.gif') repeat-x 0 0;
+}
+.LoginBody a {
+    text-decoration: none;
+}
+
+.LoginBody #PoweredBadge {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#login-form-table td.formFoot tr td {
+    display: table-cell;
+    padding-top: 0px;
+    vertical-align: middle;
+}
+
+/* There is some whitespace in the powered by image. Move it left so that the */
+/* actual image is in line with everything else */
+#login-form-table tr td.poweredBy img {
+    margin-left: -6px;
+}
+
+#login-form-table tr td.formFoot {
+    padding-top: 0px;
+}
+
+#login-form-table tr td.formFoot table {
+    width: 100%;
+}
+
+.LoginBody #Login {
+    padding: 5px 15px 0;
+}
+
+#Login {
+    width: 180px;
+    padding: 5px 15px 35px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    border-top: 2px solid #ededed;
+    border-left: 2px solid #ededed;
+    border-right: 1px solid #cdcdcd;
+    border-bottom: 1px solid #cdcdcd;
+    background: #dedede;
+    margin-top: 50px;
+    float: left;
+}
+
+#Login a:hover {
+    border:none;
+}
+
+#LoginHeader h3 {
+    margin-bottom: 10px;
+    color: #10456B;
+}
+
+#login-form-table input[type="text"],
+#login-form-table input[type="email"],
+#login-form-table input[type="password"] {
+    border-top: 2px solid #cdcdcd;
+    border-left: 2px solid #cdcdcd;
+    border-bottom: 2px solid #ededed;
+    border-right: 2px solid #ededed;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 2px;
+    height: 1.5em;
+    width: 100%;
+}
+
+#login-form-table .show-password label {
+	display: block;
+	font-size: .8em;
+    margin-top: 10px;
+}
+
+
+#login-form-table .show-password input[type="checkbox"] {
+	vertical-align: bottom;
+  	position: relative;
+	font-size: .8em;
+}
+
+/* IE 10+ Detection (including MS Edge) */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /*
+        For IE only, we won't have the email and password inputs below the
+        labels.  It doesn't seem to be possible to actually separate <td> tags
+        by newlines in IE like you can with other browsers with the
+        display: block. However, without doing anything, the inputs appear
+        higher up than the labels, so this margin top pushes the inputs down to
+        be inline with the labels
+     */
+    #login-form-table input[type="email"],
+    #login-form-table input[type="password"] {
+        margin-top: 10px;
+    }
+}
+
+#login-form-table input[type="email"]:focus,
+#login-form-table input[type="password"]:focus {
+    background:#ffedde;
+}
+
+/* For backward compatability let's hide this row
+.forgot-password-row {
+    display: none;
+}
+*/
+
+
+.login-modal-input {
+    display: flex;
+    align-items: end;
+    font-size: 15px;
+    margin: 10px 0 20px;
+}
+
+.login-modal-input input[type=checkbox]{
+    flex: none;
+    width: 25px;
+    height: 25px;
+} 
+
+#login-modal-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+#login-modal-buttons input {
+    height: 50px;
+}

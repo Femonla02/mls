@@ -1,0 +1,155 @@
+/* CSS Standard files for the User Interface ONLY */
+
+/* Custom for Links in the menu for user interface */
+#MagicMenu li#MenuHome > a {
+    background: url(../pics/home_icon.svg) left center no-repeat;
+}
+
+#MagicMenu li#MenuWebmail > a {
+    background: url(../pics/webmail_icon.svg) left center no-repeat;
+}
+
+#MagicMenu li#MenuSpam > a {
+    background: url(../pics/spam_management_icon.svg) left center no-repeat;
+}
+
+#MagicMenu li#MenuEmail > a {
+    background: url(../pics/my_email_options_icon.svg) left center no-repeat;
+}
+
+#MagicMenu li#MenuSecurity > a {
+    background: url(../pics/security_options_icon.svg) left center no-repeat;
+}
+#MagicMenu li#MenuSecurity ul #LockMyMailbox > a {
+    background: url(../pics/key_icon.svg) left center no-repeat;
+    padding: 0 0 0 28px;
+}
+#MagicMenu li#MenuDomains > a {
+    background: url(../pics/manage_domains_icon.svg) left center no-repeat;
+}
+
+#MagicMenu li#MenuMailboxes > a {
+    background: url(../pics/manage_mailboxes_icon.svg) left center no-repeat;
+}
+
+#MagicMenu li#MenuMailingLists > a {
+    background: url(../pics/mailing_list_icon.svg) left center no-repeat;
+}
+
+#MagicMenu li#MenuLogout > a {
+    background: url(../pics/logout_icon.svg) left center no-repeat;
+}
+
+#MagicMenu li#MenuHelp a {
+    background-position: 0 -241px;
+}
+
+#MagicMenu li#MenuHelp a:hover {
+    background-position: 0 -271px;
+}
+
+#webmaillinks {
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+#webmaillinks a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#webmaillinks table tr {
+    max-width: 300px;
+}
+
+
+#webmaillinks td {
+    vertical-align: top;
+    text-align: center;
+    width: 100px;
+}
+
+/* User Interface shows Security Status in the Menu */
+/* Security Status */
+
+#MagicStatus {font-weight: bold}
+
+#MagicStatus p {
+        margin: 8px 0;
+        width: 175px;
+        text-align: center; 
+}
+
+#MagicStatus small {font-size: 11px}
+
+#MagicStatus #MagicStatus-container {margin: -4px 0 0}
+
+#MagicStatus #MagicStatus-container a img[alt="enabled"]{background: url(../pics/spamenabled.gif) no-repeat}
+#MagicStatus #MagicStatus-container a img[alt="disabled"]{background: url(../pics/spamdisabled.gif) no-repeat}
+#MagicStatus #MagicStatus-container a img[alt="unavailable"]{background: url(../pics/spamunavailable.gif) no-repeat}
+
+#MagicStatus #MagicStatus-container a:hover[id="MagicStatus-spam"],
+#MagicStatus #MagicStatus-container a:hover[id="MagicStatus-virus"] {
+        filter: alpha(opacity=80);
+        opacity: 0.8;
+}       
+
+#MagicStatus #MagicStatus-container a[id="MagicStatus-spam"] > img,
+#MagicStatus #MagicStatus-container a[id="MagicStatus-virus"] > img { 
+        height: 0;
+        padding: 22px 76px 0 0;
+        width: 0;
+}       
+/* Used from the library, only for user interface */
+.domain-policy {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Some rules for position the AdTrack top header banner in User Interface */
+/* MOVE to magicmail specific files, css.css or page specific, or plugin specific */
+.adtrack-user-spot-a {
+    position: absolute;
+    top: 50px;
+    left: 380px;
+
+}
+
+.adtrack-user-spot-a-auth {
+    position: absolute;
+    top: 50px;
+    left: 380px;
+
+}
+/* Some rules for position the AdTrack top header banner in User Interface */
+
+.adtrack-user-spot-a {
+    position: absolute;
+    top: 50px;
+    left: 380px;
+
+}
+
+.adtrack-user-spot-a-auth {
+    position: absolute;
+    top: 50px;
+    left: 380px;
+}
+
+.BodyPadding {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#loggedinas {
+    margin: 4px 4px 12px 10px;
+}
+
+.MagicMenuCell {
+    background: url('../pics/clearleft_menu_1px.png') repeat-y top left;
+    margin: 0;
+    padding: 0px 0px 15px 25px;
+    min-height: 300px;
+    width: 200px;
+    font: 12px Verdana, Arial, Helvetica, sans-serif !important;
+}

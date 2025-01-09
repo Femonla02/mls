@@ -1,0 +1,246 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>
+    MagicMail Server: Login Page    </title>
+    <link rel='stylesheet' href='css/wizard.css?mtime=1715184431' type='text/css'/>
+<link rel='stylesheet' href='css/magicmail.css?mtime=1715184432' type='text/css'/>
+    <!--[if IE]><link rel='stylesheet' href='css/magicmail-ie.css?mtime=1715184426' type='text/css'/>
+<![endif]-->
+<link rel='stylesheet' href='css/css.css?mtime=1715184426' type='text/css'/>
+<link rel='stylesheet' href='css/magicmail.login.css?mtime=1715184426' type='text/css'/>
+<link rel='stylesheet' href='html_files/user.css?mtime=1578521417' type='text/css'/>
+<script language='JavaScript' type='text/javascript' src='js/global_javascript.js?mtime=1717697690'></script>
+<script language='JavaScript' type='text/javascript' src='js/htmlcanvas.js?mtime=1715184426'></script>
+<script language='JavaScript' type='text/javascript' src='js/login.js?mtime=1715184426'></script>
+<script language='JavaScript' type='text/javascript' src='js/jquery.js?mtime=1715269026'></script>
+    <link rel="shortcut icon" href="/favicon.ico" />
+	<script language="javascript" type="text/javascript">var isauthenticated=0;</script>
+    <link rel="icon" href="/pics/apple-touch-icon-precomposed.png" />
+    <link rel="icon" type="image/png" sizes="72x72" href="/pics/apple-touch-icon-72x72-precomposed.png" />
+    <link rel="icon" type="image/png" sizes="114x114" href="/pics/apple-touch-icon-114x114-precomposed.png" />
+    <link rel="icon" type="image/png" sizes="144x144" href="/pics/apple-touch-icon-144x144-precomposed.png" />
+</head>
+<body id="MagicBody" class="MagicBody">
+<div id="MagicWrapper" class="magic-unauthenticated">
+	<table class="MagicOuterTable">
+		<tr id='page_contents_row'>
+			<td>
+                <!-- $Header$ -->
+
+<!-- =================================================================== -->
+<!-- Header Style 1 BEGIN -->
+<!-- =================================================================== -->
+
+<table id="MainHeaderTable">
+     <tr><td align=right colspan=2>
+<div class="headertopnavbar">
+                    <p class="top-info_text pull-left hidden-xs small">
+                        <a href="https://www.drtel.com/webim/client.php?locale=en&amp;style=default" target="_blank" id="webchat">
+                            <span class="text-highlight">Live Chat Support</span>
+                        </a> — M-F, 8am-4:30pm
+                    </p>
+                    <p class="service-selection pull-right ">
+                        <a href="https://www.drtel.com/iness-services" class="bus" target="_blank">Business Services</a>
+                        <a href="https://www.drtel.com/residential-services" class="res" target="_blank">Residential Services</a>
+                    </p>
+                </div>
+</td></tr>
+   <tr valign="top">
+        <td id="MMLogo">
+            <span><a href="https://www.drtel.com/"><img id='leftHeaderLogo' src="/isp_images/drtel_logo.png" border="0"></a></span>
+        </td>
+        <td align="right" style="width:280px;">
+            <table id="header-table" class="nopad">
+                <tr>
+                    <td colspan="2" id="HeaderLogo"><img id='rightHeaderLogo' src="/isp_images/whitebg.png">
+                    <h3 class="slogan1" style="float:left;margin:18px 5px 0 0;">Your Technology Solutions Provider</h3>
+                    </td>
+                </tr>
+                <tr valign="bottom">
+                    <td colspan="2" class="nopad">
+                        <div class='MagicNavTab'>
+                            <a href="logout.php" id="header-logout-btn">Logout</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<!-- =================================================================== -->
+<!-- Header Style 1 END -->
+<!-- =================================================================== -->
+
+
+				<table class="MagicContentTable">
+					<tr valign="top">
+                    
+						<td class="MagicContentCell" valign="top">
+<div id="loginContentCell">
+<!-- $Id -->
+<div class="login-info-content">
+<h2>Login to Access Your Email</h2>
+<p class='main_wiz'>
+For access to your DRN Email, please enter your email address and password in the form on the right and click on the login button. 
+</p>
+<br>
+<h4>Forgot Your Password?</h4>
+<p class='main_wiz'>
+We are dedicated to providing you with a secure Online environment, so to have your password reset, please contact our local Customer Care team at 877-559-4692. Our support team is available from 8:00 am to 4:30 pm, Monday - Friday. 
+<br> <br>
+<small><i>* You MUST have cookies enabled to use these functions.</i></small>
+</p>
+</div><!-- login-info-content -->
+<div id="login-form-wrapper">
+    <form method="post" id="login-form" name="login-form" onSubmit="return checkForm();">
+        <input type="hidden" id="browser_info" value=Win10, Chrome, Desktop/>
+        <blockquote>
+            <table id="login-form-table" class='MagicEmbeddedTable'>
+                <tr>
+                    <th colspan='2'>
+                        <h4>Login to MagicMail</h4>
+                    </th>
+                </tr>
+                
+
+                <tr>
+                    <td class="textright">
+                        <label for="login-email" title=Enter your full email address.>
+                            Email:
+                        </label>
+                    </td>
+                    <td>
+                        <input size="20" type="email" name="email" id="login-email" autocorrect="off" autocapitalize="none"
+                            value=>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="textright">
+                        <label for="login-password"
+                            title=Enter your password.  Ensure your CAPS LOCK is not on.>
+                                Password:
+                        </label>
+                    </td>
+                    <td class="show-password" >
+                        <input size="20" type="password" name="password"
+                            id="login-password"> 
+                        <label for="show-password">
+                            <input type="checkbox" id="show-password" onclick="showPass()"> 
+				                Show Password
+                        </label>
+                    </td>
+                </tr>
+                <tr class="forgot-password-row">
+                    <td></td>
+                    <td id="recover-pass-td">
+                        <a href="recover-password.php">Forgot your password?</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class='formFoot'>
+                        <table>
+                            <tr>
+                                <td class="poweredBy">
+
+                                <a href="https://www.magicmail.com" target="_blank"><img src="/pics/powered_by.png"> </a>
+
+                                
+
+
+</td>
+                                <td class="loginBtn">
+                                    <input type="submit" value="Login">
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </blockquote>
+    </form>
+</div>
+<!-- $default_login_extra$ -->
+<!-- =================================================================== -->
+<!-- This is the login EXTRA section of the website (below the login form) -->
+
+
+<!-- END OF default_login_extra -->
+<!-- =================================================================== -->
+
+</div><!-- loginContentCell -->
+                          </td>
+                      </tr>
+                  </table>
+              </td>
+          </tr>
+          <tr id='footer_row'>
+              <td><!-- $Id: company_footer.html 34627 2019-06-28 00:59:51Z shaun $ -->
+<!-- =================================================================== -->
+<!-- This is the FOOTER section of the website -->
+<br>
+
+<p class="call4help">
+Have questions? Give us a call at 701.344.5000 or email us at <a hrefl="mailto:customerservice@drtel.com">customerservice@drtel.com</a>
+</p>
+
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td>
+
+<p class="footernavbar">
+                <a class="footernavbar" href="https://drn.smarthub.coop/PayNow.html">Pay My Bill</a>
+                <a class="footernavbar" href="https://www.drn.coop/blog/">Blog</a>
+                <a class="footernavbar" href="https://www.drn.coop/contact-us/">Contact Us</a>
+                <a class="footernavbar" href="https://www.drn.coop/about-us/">About Us</a>
+                <a class="footernavbar" href="https://ebill.drtel.net/">E-bill</a>
+                <a class="footernavbar" href="https://www.drn.coop/support/">Support</a>
+                <a class="footernavbar" href="https://www.drn.coop/legal/">Legal</a>
+                <a class="footernavbar" href="https://www.speedtest.net/">Speed Test</a>
+		<a class="footernavbar" href="https://mail.drtel.net/iphone">IOS</a>
+                    
+            </p>
+
+
+</td> </tr>
+
+
+</tr>
+	<tr align="center" class="MagicCompanyFooter">
+		<td>
+
+
+                    <small class="small">2020 © Dickey Rural Networks. All rights reserved.</small>
+
+		</td>
+	</tr>
+</table>
+<!-- END OF Footer -->
+<!-- =================================================================== -->
+<!-- ================================================================== -->
+<!-- Copyright Information, DO NOT CHANGE BELOW HERE -->
+<!-- ================================================================== -->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr align="center" class="MagicCopyRight">
+          <td>
+            <p align="center">
+                MagicMail is a Registered Trademark of Wizard Tower TechnoServices Ltd.
+            </p>
+          </td>
+        </tr>
+      </table>
+<!-- ================================================================== -->
+
+            </td>
+        </tr>
+    </table>
+</div><!-- MagicWrapper -->
+</body>
+</html>

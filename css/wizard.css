@@ -1,0 +1,96 @@
+/* -----------------------------------------------------------------------
+
+ Wizard CSS (2.1) Framework
+ http://www.wizard.ca
+
+ Copyright: 2010-2019 Wizard IT Services, All Rights Reserved
+ All style attributes in alpha-numeric order starting from 0
+
+----------------------------------------------------------------------- */
+
+/* Reset styles */
+*{outline:medium none}a,abbr,acronym,address,blockquote,body,caption,code,dd,del,dfn,dl,dt,em,fieldset,form,div,h1,h2,h3,h4,h5,h6,html,iframe,img,label,legend,li,object,ol,p,pre,q,span,table,tbody,td,tfoot,th,thead,tr,ul{border:0;font-family:inherit;font-size:100%;font-style:inherit;font-weight:inherit;margin:0;padding:0;vertical-align:baseline}table{border-collapse:separate;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal}table,td,th{vertical-align:middle}a{cursor:pointer}a img{border:none}blockquote:before,blockquote:after,q:before,q:after{content:""}blockquote,q{quotes:"" ""}
+
+/* Quick styles */
+.left { float: left; }
+.right { float: right; }
+
+.textleft { text-align: left; }
+.textright { text-align: right; }
+.textcenter { text-align: center; }
+.textjustify { text-align: justify; }
+
+.green { color: #4E9113; }
+.orange { color: #CE680E; }
+.red { color: #BA0A0A; }
+
+/* Layout */
+body {
+    background: #FFF;
+    color: #222;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 125%
+}
+
+/* Forms */
+input[type=text],
+input[type=email],
+input[type=password],
+textarea, select {
+    background:#FFF;
+    border:1px solid #999;
+    border-radius:3px;
+}
+
+input[type=text]:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+textarea:focus,
+select:focus {
+    background: #FFF6DF;
+    border-color: #666;
+}
+
+input[type=text],
+input[type=text],
+input[type=password],
+textarea,
+select {
+    margin: 0.5em 0;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    cursor: pointer;
+    margin: 0;
+    -moz-border-bottom-colors: #999 #FFF;
+    -moz-border-left-colors: #999 #FFF;
+    -moz-border-right-colors: #999 #FFF;
+    -moz-border-top-colors: #999 #FFF;
+    position: relative;
+    top: 1px
+
+}
+
+.error,.notice,.success,.warning{border:1px solid #DDD;margin-bottom:1em;padding:.8em;border-radius:8px;text-align:center}
+
+
+/* This is what Evgueni wants and other CSS frameworks use 
+.success{background:#E6EFC2;border-color:#C6D880;color:#264409}
+.error{background:#FBE3E4;border-color:#FBC2C4;color:#8A1F11} */
+
+/* This is what Michael wants */
+.success{background:#8CEF8C;border-color:#008A00;color:#000}
+.error{background:#FFCFD6;border-color:#9C0000;color:#000}
+.warning{background-color: #E1BA00;border-color:#C7A502;color:#000;}
+
+.notice{background:#FFF6BF;border-color:#FFD324;color:#514721}
+.error a{color:#8A1f11}
+.notice a{color:#514721}
+.success a{color:#264409}
+
+.main_wiz {
+    font: 12px Verdana, Arial, Helvetica, sans-serif;
+    max-width: 690px;
+}

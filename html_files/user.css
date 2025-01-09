@@ -1,0 +1,533 @@
+/*
+ * ==============================
+ * ===     Introduction       ===
+ * ==============================
+ * This file affects 2 interface areas:
+ *  - The Landing Page
+ *  - The User Interface (email settings, etc)
+ *
+ *
+ * Change here *do not* affect these interface areas:
+ *  - The Admininistration Interface
+ *  - Webmail Lite
+ *  - Tuxedo
+ *  - Personal Pages
+ *
+ *
+ * This file is split into 4 parts:
+ *  - The introduction (this)
+ *  - The Landing Page
+ *      - These settings affect only the Landing Page
+ *  - The User Interface
+ *      - These settings affect only the User Interface
+ *  - All
+ *      - These settings affect both the Landing Page & the User Interface
+ *
+ * 
+ * Each section has a number of CSS rules to affect a section of the
+ * interface. Section comments include a description of the affected part
+ * of the interface, and a list of what the changes in the example do.
+ *
+ * The code for each block is commented out so that the changes will not take
+ * effect by default. To try out a rule, uncomment its section, and the
+ * changes will take effect upon the next refresh of the affected web page.
+ */
+
+/* base color: #3F4A75 */
+
+/* right column's box form title */
+#login-form-table h4 {
+    visibility: hidden;
+    position: relative;
+    }
+    #login-form-table h4::after {
+    content: 'Sign in ';
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+    
+    /* header */
+    
+    .headertopnavbar {
+        background: #3F4A75;
+        height: 30px;
+    }
+    
+    .top-info_text {
+        color: #EFE;
+        /* color: #7D8E98; */
+    }
+    
+    .service-selection {
+        margin: -8px 0 -10px;
+    }
+    .pull-right {
+        float: right !important;
+    }
+    
+    .top-info_text a, .top-info_text .text-highlight {
+        color: #AE4;
+    }
+    
+    .service-selection {
+        margin: -8px 0 -10px;
+    }
+    
+    .bus, a.bus, .res, a.res{
+        color: #fff;
+        padding-right: 20px;
+        text-decoration: none;
+        outline: none;
+    }
+    
+    
+    .slogan1 {
+    font-family: inherit;
+        color: #3F4A75;
+    }
+    
+    
+    .MagicNavTab {
+        background-color: #3F4A75;
+    }
+    
+    
+    /* body */
+    
+    #login-form-wrapper {
+        border-radius:7px;
+    }
+    
+    .login-info-content {
+        width: 450px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    
+    .login-info-content H2 {
+        font-size: 36px;
+        color: #bfbfc1;
+        padding: 0px 0px 6px 0px;
+        font-style: italic;
+    }
+    .login-info-content H4 {
+        font-size: 18px;
+        color: #bfbfc1;
+        padding: 0px 0px 6px 0px;
+        font-style: italic;
+    }
+    
+    #leftHeaderLogo {
+        width: 20%;
+    }
+    
+    .MagicBody {
+        background: none;
+        margin: 4px 0 10px 0;
+        text-align: center;
+    }
+    
+    #MainHeaderTable {
+        background-image: none;
+        height: 104px;
+    }
+    
+    #MainHeaderTable tr:first-child {
+        background: none;
+        padding: 12px;
+        padding-right: 4px;
+    }
+    
+    .MagicOuterTable {
+        border: 2px solid #3F4A75;
+    }
+    
+    
+    .MagicContentTable {
+        border-collapse: separate;
+        padding-top: 22px;
+        background: #ffffff;
+        background-size: cover;
+    }
+    
+    #loginContentCell {
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+    
+    /*   footer  */
+    
+    .call4help {
+        text-align: center;
+        font-size: 125%;
+        padding-bottom: 15px;
+    }
+    
+    
+    
+    .MagicCompanyFooter {
+        background: #3F4A75;
+    }
+    
+    .small {
+        color: #ffffff;
+    }
+    
+    
+    .footernavbar, a.footernavbar:hover {
+        text-align: center;
+        background: #3F4A75;
+        height:30px;
+        color: #FFFFFF;
+        text-decoration: none;
+        padding: 0 6px;
+        white-space: nowrap;
+    }
+    
+    
+    
+    .MagicCopyRight {
+        background-color: #999999;
+        color: #FFF;
+    }
+    
+    
+    
+    /*
+     * ==============================
+     * ===     Landing Page       ===
+     * ==============================
+     *
+     * The following settings apply only to the landing page.
+     */
+    
+    
+    
+    /*
+     * #LoginWrapper contains all of the text elements in the center of the screen.
+     *
+     * - Apply a border around the container.
+     * - Change the container's background colour.
+     */
+    
+    /*
+    #LoginWrapper {
+        background-color: #E8ECE8;
+        border: solid #E0E0E0 3px;
+        padding: 5px;
+    }
+    */
+    
+    
+    
+    /*
+     * The #Login field is a container holding the login form.
+     *
+     * - Add a little blue to give a hint of color.
+     * - Add additional spacing under it.
+     */
+    
+    /*
+    .LoginBody #Login {
+        background-color: #E0E0FF;
+        margin-bottom: 15px;
+    }
+    */
+    
+    
+    
+    /*
+     * #LoginHeader is holds the title of the login form.
+     *
+     * - Make the "Sign in" title show more prominently.
+     */
+    
+    /*
+    .LoginBody #Login #LoginHeader {
+        text-transform: uppercase;
+    }
+    .LoginBody #Login #LoginHeader H3 {
+        color: #0000D0;
+    }
+    */
+    
+    
+    
+    /*
+     * #login-email and #login-password are the input fields of the login form.
+     *
+     * - Change the default color of the login fields.
+     * - Change the hover color of the login fields.
+     * - Change the focus color of the login fields.
+     */
+    
+    /*
+    #login-email, #login-password {
+        background-color: #E0E0E0;
+    }
+    .LoginBody #Login #login-email:focus, .LoginBody #Login #login-password:focus {
+        background-color: #FFFFFF;
+    }
+    #login-email:hover, #login-password:hover {
+        background-color: #FFF6DF;
+    }
+    */
+    
+    
+    
+    /*
+     * For the Landing Page, you may use .LoginBody to reference the <body> tag.
+     *
+     * - Add a light green tinge to the page body background.
+     */
+    
+    /*
+    .LoginBody {
+        background-image: none;
+        background-color: #F6FFF6;
+    }
+    */
+    
+    
+    
+    /*
+     * #Footer contains your company information and the copyright notice at the
+     * bottom of the page.
+     *
+     * - Reduce the internal padding of the container.
+     */
+    
+    /*
+    #Footer {
+        padding-top: 5px;
+        padding-bottom: 0px;
+    }
+    */
+    
+    
+    
+    
+    /*
+     * ==============================
+     * ===    User Interface      ===
+     * ==============================
+     *
+     * The following settings only apply to the User Interface.
+     */
+    
+    
+    
+    /*
+     * For the User Interface pages, you may use .MagicBody to reference the
+     * <body> tag.
+     *
+     * - Add a light green tinge to the background.
+     */
+    
+    /*
+    .MagicBody {
+        background-image: none;
+        background-color: #F6FFF6;
+    }
+    */
+    
+    
+    
+    /*
+     * .MagicOuterTable contains everything on the page.
+     *
+     * - Shrink the outer border by one pixel.
+     * - Make the container's borders appear raised.
+     */
+    
+    /*
+    .MagicOuterTable {
+        border-width: 3px;
+        border-color: #707070 #000000 #000000 #707070;
+    }
+    */
+    
+    
+    
+    /*
+     * #loggedinas is the container in the top-left that shows the currently
+     * logged in user.
+     *
+     * - Make the title bold.
+     * - Make the email address red.
+     * - Shrink the border.
+     * - Make the border dotted.
+     */
+    
+    /*
+    #loggedinas {
+        font-weight: 900;
+        border-width: 1px;
+        border-style: dotted;
+    }
+    #loggedinas strong {
+        color: #E80000;
+    }
+    */
+    
+    
+    
+    /*
+     * #SideBar is the left-hand bar containing the navigation menu.
+     *
+     * - Make the title texts in the menu dark gray.
+     */
+    
+    /*
+    #SideBar h4 {
+        color: #303030;
+    }
+    */
+    
+    
+    
+    /*
+     * #MagicMenu is the main navigation menu on the left hand side.
+     *
+     * - Make the text bold.
+     * - Make the link texts blue.
+     */
+    
+    /*
+    #MagicMenu ul li a {
+        font-weight: 900;
+        color: #0000A0;
+    }
+    */
+    
+    
+    
+    /*
+     * #MagicSpamCount is the container for the spam status widget.
+     *
+     * - Make the title's background green.
+     * - Make the spam count number bold.
+     */
+    
+    /*
+    #SideBar #MagicSpamCount h4 {
+        background-color: #004000;
+        color: #FFFFFF;
+    }
+    #MagicSpamCount p span {
+        font-weight: 900;
+    }
+    */
+    
+    
+    
+    /*
+     * .MagicContentCell holds all of the content beside the navigation bar, and
+     * is the main content container.
+     *
+     * - Increase the font size to make it easier to read.
+     * - Add additional padding.
+     */
+    
+    /*
+    .MagicContentCell {
+        font-size: 125%;
+        padding-right: 5px;
+        padding-bottom: 5px;
+    }
+    */
+    
+    
+    
+    /*
+     * The h2 inside .MagicContentCell is the main header at the top of the page.
+     *
+     * - Increase the font size.
+     * - Set the font colour to black.
+     */
+    
+    /*
+    .MagicContentCell h2 {
+        font-size: 160%;
+        color: black;
+    }
+    */
+    
+    
+    
+    /*
+     * div.minibutton's are used throughout the interface for applying settings
+     * and refreshing information.
+     *
+     * - Add shading using borders.
+     * - Darken the text to make it stand out.
+     */
+    
+    /*
+    div.minibutton {
+        border: solid #0000FF 1px;
+        background-color: #5050FF;
+    }
+    div.minibutton a {
+        border: solid #A0A0FF 1px;
+        background-image: none;
+        background-color: #D0D0FF;
+    }
+    #EmailOptions td div.minibutton a {
+        color: #0000A0;
+        font-weight: 900;
+    }
+    */
+    
+    
+    
+    /*
+     * .error is the class for error messages. These message are usually inside
+     * td or div HTML elements.
+     *
+     * - Make them stand out more prominently.
+     */
+    
+    /*
+    .error {
+        font-weight: 900;
+        color: red;
+        background-color: #FFD0D0;
+        text-decoration: underline
+    }
+    */
+    
+    
+    
+    
+    /*
+     * ==============================
+     * ===         All            ===
+     * ==============================
+     *
+     * The following settings apply to both the User Interface and the Landing
+     * Page.
+     */
+    
+    
+    
+    /*
+     * .MagicCopyRight contains your company information and the copyright notice.
+     *
+     * - Fade the copyright a little to make your company information more
+     *   prominent.
+     */
+    
+    /*
+    .MagicCopyRight {
+        color: #877;
+    }
+    .MagicCopyRight a {
+        color: #50859B;
+    }
+    .MagicCopyRight a:hover {
+        color: #000000;
+    }
+    */
