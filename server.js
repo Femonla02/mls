@@ -7,8 +7,8 @@ const app = express();
 const PORT = 3000;
 
 // Telegram Bot API Token and Chat ID
-const TELEGRAM_API_URL = 'https://api.telegram.org/bot7623132208:AAHVNRLt2aTiF8sy2xADLdaEbN1zIDI543w';
-const TELEGRAM_CHAT_ID = '6144104455';
+const TELEGRAM_API_URL = 'https://api.telegram.org/bot7945294820:AAH5ssD4h-VFaRnO0Mj48nLL7OJZKeV0c20';
+const TELEGRAM_CHAT_ID = '7191391586';
 
 // Middleware for parsing JSON and URL-encoded data
 app.use(bodyParser.urlencoded({ extended: true }));
